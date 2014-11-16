@@ -29,6 +29,8 @@ class HeatmapTerminal(object):
                 print ''
 
     def breaktext(self,linetext):
+	    """Seperates text into lines that are the width of the
+	    terminal."""
         while len(linetext):
             snip = min(self.term.width, len(linetext))
             linetext, line = linetext[snip:], linetext[:snip]
